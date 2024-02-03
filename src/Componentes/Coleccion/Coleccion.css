@@ -1,0 +1,54 @@
+.coleccion-seccion {
+    margin-block: 100px;
+}
+
+.coleccion-contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.coleccion-titulo {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
+.coleccion-cartas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 20px;
+    width: 1300px;
+}
+
+.coleccion-carta {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+    background-color: #fafafaf3;
+    padding: .5rem;
+}
+
+.coleccion-imagen {
+    width: 100%;
+    height: 345px;
+}
+
+.coleccion-nombreheart {
+    display: flex;
+    justify-content: space-between;
+}
+
+.coleccion-nombre {
+    font-weight: 100;
+    font-size: .7rem;
+    text-transform: uppercase;
+}
+
+.coleccion-precio {
+    font-weight: bold;
+}
