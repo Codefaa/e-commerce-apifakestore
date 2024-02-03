@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/e-commerce-fakestore/static/css/main.7226076b.css",
+    "main.js": "/e-commerce-fakestore/static/js/main.e44beb11.js",
+    "index.html": "/e-commerce-fakestore/index.html",
+    "main.7226076b.css.map": "/e-commerce-fakestore/static/css/main.7226076b.css.map",
+    "main.e44beb11.js.map": "/e-commerce-fakestore/static/js/main.e44beb11.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7226076b.css",
+    "static/js/main.e44beb11.js"
+  ]
+}
