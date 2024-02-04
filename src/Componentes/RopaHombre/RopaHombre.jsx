@@ -1,15 +1,15 @@
+import './RopaHombre.css';
 import { useFetch } from '../../useFetch/useFetch'
-import './Coleccion.css'
 
-function Coleccion() {
+function RopaHombre() {
 
-    const { data, loading, error } = useFetch("https://fakestoreapi.com/products/");
+    const { data, loading, error } = useFetch("https://fakestoreapi.com/products/category/men's clothing");
 
     return(
         <section className='coleccion-seccion'>
 
             <div className='coleccion-contenedor'>
-                <h4 className='coleccion-titulo'>Coleccion</h4>
+                <h4 className='coleccion-titulo'>Ropa de hombre</h4>
 
                 <section className="coleccion-cartas">
                 {error && <h2>Error: {error}</h2>}
@@ -39,4 +39,4 @@ function Coleccion() {
     )
 }
 
-export default Coleccion;
+export default RopaHombre;

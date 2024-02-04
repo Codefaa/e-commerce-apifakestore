@@ -29,7 +29,7 @@ function Pie() {
                         <a className='pie-enlace' href="">Terminos y condiciones</a>
                         <a className='pie-enlace' href="">Contacto</a>
                     </div>
-                    <p className='pie-copyright'>© BERCHER 2021. Todos los derechos reservados</p>
+                    <p className='pie-copyright'>© FAKE STORE API 2024. Todos los derechos reservados</p>
                 </div>
                 
             </div>

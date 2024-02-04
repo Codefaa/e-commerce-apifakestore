@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 100px;
+    margin-block: 80px;
 }
 
 .pie-contenedor {
@@ -36,8 +36,16 @@
 
 .pie-boton {
     padding: .6rem;
-    color: var(--color-principal);
-    background-color: var(--color-secundario);
+    color: white;
+    background-color: black;
+}
+
+.pie-boton:hover {
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    transition: all .5s;
+    cursor: pointer;
 }
 
 .pie-redes {
@@ -47,6 +55,7 @@
 
 .redes {
     font-size: 2rem;
+    cursor: pointer;
 }
 
 
@@ -60,7 +69,7 @@
 }
 
 .pie-enlace {
-    color: var(--color-secundario);
+    color: black;
     text-decoration: none;
     border-right: 1px solid black;
     padding-inline: 1rem;
@@ -69,6 +78,10 @@
 .pie-enlace:last-child {
     border-right: none;
     padding-right: 0;
+}
+
+.pie-enlace:hover {
+    color: gray;
 }
 
 .pie-copyright {

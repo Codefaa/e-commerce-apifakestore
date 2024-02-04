@@ -1,0 +1,82 @@
+.contacto-seccion {
+    margin-block: 80px;
+}
+
+.contacto-contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.contacto-izquierda {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contacto-izquierda p  {
+    color: gray;
+    font-size: .8rem;
+}
+
+.contacto-titulo {
+    text-transform: uppercase;
+}
+
+.contacto-subtitulo {
+    text-transform: uppercase;
+}
+
+.contacto-redes {
+    text-decoration: none;
+    color: gray;
+    font-size: .8rem;
+}
+
+
+
+.contacto-derecha {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    gap: 50px;
+    background-color: #F6F7F9;
+    padding: 2rem;
+}
+
+.contacto-nosotros {
+    letter-spacing: 2px;
+}
+
+.contacto-inputtex {
+    display: flex;
+    gap: 20px;
+}
+
+.contacto-text {
+    padding: 1rem;
+    width: 300px;
+}
+
+.contacto-textarea {
+    padding: 1rem;
+}
+
+.contacto-boton {
+    width: 200px;
+    background-color: black;
+    color: white;
+    border: 0;
+    padding: .8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.contacto-boton:hover {
+    background-color: #D98568;
+    transition: all .5s;
+    border: 0;
+}

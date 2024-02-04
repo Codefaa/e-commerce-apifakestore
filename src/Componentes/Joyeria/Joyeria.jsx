@@ -1,15 +1,15 @@
-import { useFetch } from '../../useFetch/useFetch'
-import './Coleccion.css'
+import { useFetch } from '../../useFetch/useFetch';
+import './Joyeria.css';
 
-function Coleccion() {
+function Joyeria() {
 
-    const { data, loading, error } = useFetch("https://fakestoreapi.com/products/");
+    const { data, loading, error } = useFetch('https://fakestoreapi.com/products/category/jewelery');
 
     return(
         <section className='coleccion-seccion'>
 
             <div className='coleccion-contenedor'>
-                <h4 className='coleccion-titulo'>Coleccion</h4>
+                <h4 className='coleccion-titulo'>Joyeria</h4>
 
                 <section className="coleccion-cartas">
                 {error && <h2>Error: {error}</h2>}
@@ -39,4 +39,4 @@ function Coleccion() {
     )
 }
 
-export default Coleccion;
+export default Joyeria;

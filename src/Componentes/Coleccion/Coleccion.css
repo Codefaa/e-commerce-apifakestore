@@ -1,5 +1,5 @@
 .coleccion-seccion {
-    margin-block: 100px;
+    margin-block: 80px;
 }
 
 .coleccion-contenedor {
@@ -19,7 +19,6 @@
 .coleccion-cartas {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 1fr);
     gap: 20px;
     width: 1300px;
 }
