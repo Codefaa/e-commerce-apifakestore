@@ -20,9 +20,15 @@ function Coleccion() {
 
                         return (
                                 <section key={ropa.id} className='coleccion-carta'>
-                                    <img className='coleccion-imagen' src={ropa.image} alt={ropa.title} />
+                                    <a href="#">
+                                    <div className="carta">
+                                        <img className='coleccion-imagen' src={ropa.image} alt={ropa.title} />
+                                        <div className="coleccion-fondonegro"></div>
+                                    </div>
+                                    </a>
+                                    
                                     <div className='coleccion-nombreheart'>
-                                        <h4 className='coleccion-nombre'>{ropa.title}</h4>
+                                        <a className='coleccion-enlacenombre' href="#"><h4 className='coleccion-nombre'>{ropa.title}</h4></a>
                                         <i className="corazon bi bi-heart"></i>
                                     </div>
                                     <p className='coleccion-precio'>${ropa.price}</p>
