@@ -24,7 +24,7 @@ function App() {
       <CartProvider>
         <FavoritosProvider>
 
-          <BrowserRouter basename="/e-commerce-apifakestore/">
+          <BrowserRouter basename="/e-commerce-apifakestore">
 
             <Encabezado onSearch={handleSearch} busqueda={busqueda} /> {/* Pasa los términos de búsqueda al Encabezado */}
 
