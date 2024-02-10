@@ -21,6 +21,7 @@
     font-weight: 900;
     font-size: 2rem;
     letter-spacing: 4px;
+    user-select: none;
 }
 
 .inicio-abajo {
@@ -28,7 +29,6 @@
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    height: 2000px;
     margin-top: 80px;
     position: relative;
 }
@@ -63,7 +63,7 @@
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(1, 1fr);
     gap: 20px;
-    width: 1300px;
+    max-width: 1300px;
 }
 
 .inicio-boton {
@@ -91,7 +91,7 @@
 .inicio-lookbook {
     display: flex;
     gap: 20px;
-    width: 1300px
+    max-width: 1300px
 }
 
 .inicio-imagen-lookbook {
@@ -109,4 +109,33 @@
     padding-inline: 1.7rem;
     width: 300px;
     cursor: pointer;
+}
+
+
+
+
+@media screen and (width <= 975px) {
+    
+    .inicio-vertical {
+        display: none;
+    }
+
+    .inicio-destacado, .inicio-lookbook {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        max-width: 800px;
+    }
+}
+
+@media screen and (width <= 768px) {
+
+    .inicio-destacado, .inicio-lookbook {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        max-width: 800px;
+    }
+    
+    .inicio-look {
+        flex-direction: column;
+    }
 }

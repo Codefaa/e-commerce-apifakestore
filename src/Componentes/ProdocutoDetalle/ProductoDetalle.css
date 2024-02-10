@@ -1,0 +1,134 @@
+.productodetalle-detalles {
+    margin: 80px auto;
+    width: 1000px;
+}
+ 
+.productodetalle-contenedor {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 40px;
+}
+
+.productodetalle-contenedor-imagen {
+    min-width: 500px;
+    height: 600px;
+    background-color: #fafafaf3;
+    padding: .5rem;
+}
+
+.productodetalle-imagen {
+    width: 100%;
+    height: 100%;
+}
+
+.productodetalle-datos {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.productodetalle-titulo {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+}
+
+.productodetalle-codigo-marca {
+    color: gray;
+    text-transform: uppercase;
+    font-size: .8rem;
+}
+
+.marca {
+    margin-left: 1.4rem;
+}
+
+.productodetalle-precio {
+    font-size: 2rem;
+}
+
+.span-descripcion {
+    text-transform: uppercase;   
+    font-weight: bold;
+}
+
+.productodetalle-descripcion::first-letter {
+    text-transform: capitalize;
+}
+
+.productodetalle-contenedor-talle {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-top: 1px solid gray;
+    padding-top: 1rem;
+}
+
+.productodetalle-talle {
+    text-transform: uppercase;   
+    font-weight: bold;
+}
+
+#productodetalle-select {
+    padding: .4rem;
+    padding-right: 1.4rem;
+    border-radius: 5px;
+}
+
+.productodetalle-contenedor-cantidad {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-block: 1px solid gray;
+    padding-block: 1rem;
+}
+
+.productodetalle-cantidad {
+    text-transform: uppercase;   
+    font-weight: bold;
+}
+
+
+.productodetalle-añadir {
+    padding: 1.1rem;
+    padding-inline: 1.8rem;
+    border: 0;
+    background-color: black;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.productodetalle-añadir:hover {
+    background-color: rgba(0, 0, 0, 0.425);
+    transition: .5s;
+}
+
+.productodetalle-contenedor-redes {
+    display: flex;
+    gap: 30px;
+}
+
+.productodetalle-redes {
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+.productodetalle-boton-favorito {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+    border: 0;
+    background-color: white;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-left: 3rem;
+}
+
+.productodetalle-boton-favorito:hover {
+    background-color: #fafafa;
+    transition: .5s;
+}
+

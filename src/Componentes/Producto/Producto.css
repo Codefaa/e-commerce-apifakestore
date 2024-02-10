@@ -1,0 +1,108 @@
+.producto-carta {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+    background-color: #fafafaf3;
+    padding: .5rem;
+}
+
+.producto-imagen {
+    width: 100%;
+    height: 345px;
+}
+
+.carta {
+    position: relative;   
+}
+
+.producto-fondonegro {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: .4s;
+}
+
+.carta:hover .producto-fondonegro {
+    opacity: 1;
+    visibility: visible;
+}
+
+.producto-fondonegro::before {
+    content: 'VER PRODUCTO';
+    position: absolute;
+
+    top: 290px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.producto-nombreheart {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bi-heart {
+    transition: transform 0.5s ease;
+}
+
+.bi-heart:hover {
+    color: red;
+    transform: rotateY(180deg);
+}
+
+.producto-nombre {
+    font-weight: 100;
+    font-size: .7rem;
+    text-transform: uppercase;
+}
+
+.producto-precio {
+    font-weight: bold;
+}
+
+.producto-enlacenombre {
+    text-decoration: none;
+    color: black;
+}
+
+.producto-enlacenombre:hover {
+    color: #D56E72;
+    transition: all .4s;
+}
+
+
+@media screen and (width <= 975px) {
+
+    .producto-imagen {
+        height: 400px;
+    }
+
+    .producto-fondonegro::before {
+        top: 340px;
+    }
+
+}
+
+@media screen and (width <= 768px) {
+
+    .producto-imagen {
+        height: 600px;
+    }
+
+    .producto-fondonegro::before {
+        top: 520px;
+    }
+
+}

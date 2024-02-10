@@ -1,0 +1,145 @@
+.pago-form {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin-block: 80px;
+}
+.pago-contenedor {
+    display: flex;
+    gap: 20px;
+}
+
+.pago-formulario {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 1rem;
+    color: gray;
+    border: 0;
+    width: auto;
+    width: 700px;
+}
+
+.pago-facturacion {
+    grid-column: 1/3;
+    text-transform: uppercase;
+    color: black;
+}
+
+.pago-adicional {
+    grid-column: 1/3;
+    text-transform: uppercase;
+    color: black;
+}
+
+.input-direccion {
+    grid-column: 1/3;
+}
+
+.pago-inputs {
+    display: block;
+    width: 100%;
+    padding: .8rem;
+}
+
+.pago-textarea {
+    display: block;
+    padding: .8rem;
+    width: 100%;
+}
+
+.textarea-nota {
+    grid-column: 1/3;
+}
+
+.pago-compra {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    max-width: 500px;
+    padding: 1rem;
+    gap: 20px;
+    
+}
+
+.pago-tucompra {
+    grid-column: 1/3;
+    text-transform: uppercase;
+}
+
+.pago-productos {
+    grid-column: 1/3;
+    border-bottom: 1px solid black;
+}
+
+.pago-terminoscondiciones {
+    grid-column: 1/3;
+    border-top: 1px solid black;
+    padding-top: 1rem;
+}
+
+.label-mediopago {
+    grid-column: 1/3;
+}
+
+#medio-pago {
+    display: block;
+    width: 100%;
+    padding: .8rem;
+    margin-top: 10px;
+}
+
+.boton-pagar {
+    border: 0;
+    background-color: #1F1F1F;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all .4s;
+    width: 150px;
+}
+
+.boton-pagar:hover {
+    background-color: #1f1f1fe3;
+}
+
+@media screen and (width <= 1220px) {
+    
+    .pago-formulario {
+        width: auto;
+    }
+}
+
+@media screen and (width <= 975px) {
+
+    .pago-contenedor {
+        display: flex;
+        flex-direction: column;
+
+        justify-content: center;
+    }
+
+    .pago-compra {
+        width: 660px;
+    }
+
+    .boton-pagar {
+        height: 50px;   
+    }
+
+}
+
+@media screen and (width <= 768px) {
+
+    .pago-formulario {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+    }
+
+    .pago-compra {
+        width: 400px;
+        margin-inline: 10px;
+    }
+
+}

@@ -2,36 +2,49 @@ import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Encabezado from './Componentes/Encabezado/Encabezado';
 import Pie from './Componentes/Pie/Pie';
-import Coleccion from './Componentes/Coleccion/Coleccion';
 import Inicio from './Componentes/Inicio/Inicio';
-import RopaHombre from './Componentes/RopaHombre/RopaHombre';
-import RopaMujer from './Componentes/RopaMujer/RopaMujer';
-import Joyeria from './Componentes/Joyeria/Joyeria';
-import Electronica from './Componentes/Electronica/Electronica';
 import Contacto from './Componentes/Contacto/Contacto';
-
+import ProductoDetalle from './Componentes/ProdocutoDetalle/ProductoDetalle';
+import { CartProvider } from './Context/CartContext';
+import Carrito from './Componentes/Compra/Carrito';
+import ProductoLista from './Componentes/ProductoLista/ProductoLista';
+import { FavoritosProvider } from './Context/FavoritoContext';
+import Pago from './Componentes/Pago/Pago';
+import { useState } from 'react';
 
 function App() {
+  const [busqueda, setBusqueda] = useState(""); // Estado para los términos de búsqueda
+
+  const handleSearch = (terminoBusqueda) => {
+    setBusqueda(terminoBusqueda); // Actualizar los términos de búsqueda
+  };
 
   return (
     <div className="App">
-      <BrowserRouter basename="/e-commerce-fakestore">
+      <CartProvider>
+        <FavoritosProvider>
 
-        <Encabezado />
+          <BrowserRouter basename="/e-commerce-fakestore">
 
-        <Routes>
-          <Route path='/' element={<Inicio />} />
-          <Route path='coleccion' element={<Coleccion />} />
-          <Route path='ropahombre' element={<RopaHombre />} />
-          <Route path='ropamujer' element={<RopaMujer />} />
-          <Route path='joyeria' element={<Joyeria />} />
-          <Route path='electronica' element={<Electronica />} />
-          <Route path='contacto' element={<Contacto />} />
-        </Routes>
+            <Encabezado onSearch={handleSearch} busqueda={busqueda} /> {/* Pasa los términos de búsqueda al Encabezado */}
 
-        <Pie />
+            <Routes>
+              <Route path='/' element={<Inicio />} />
+              <Route path='/contacto' element={<Contacto />} />
+              <Route path='/productos/:id' element={<ProductoDetalle />} />
+              {/* Pasa los términos de búsqueda al componente ProductoLista */}
+              <Route path='/productos' element={<ProductoLista busqueda={busqueda} />} />
+              <Route path=':categoria' element={<ProductoLista busqueda={busqueda} />} />
+              <Route path='/carrito' element={<Carrito />} />
+              <Route path='/pago' element={<Pago />} />
+            </Routes>
 
-      </BrowserRouter>
+            <Pie />
+
+          </BrowserRouter>
+          
+        </FavoritosProvider>
+      </CartProvider>
     </div>
   );
 }

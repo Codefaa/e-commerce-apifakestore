@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-block: 80px;
+    padding-block: 80px;
 }
 
 .pie-contenedor {
@@ -19,8 +19,7 @@
     justify-content: center;
     align-items: center;
     gap: 30px;
-    padding-bottom: 2rem;
-    border-bottom: 1px solid black;
+
 }
 
 .pie-titulo,
@@ -53,6 +52,11 @@
     gap: 10px;
 }
 
+.pie-red{
+    text-decoration: none;
+    color: black;
+}
+
 .redes {
     font-size: 2rem;
     cursor: pointer;
@@ -65,7 +69,8 @@
     gap: 20px;
     justify-content: center;
     align-items: center;
-
+    padding-top: 2rem;
+    border-top: 1px solid black;
 }
 
 .pie-enlace {
@@ -86,4 +91,21 @@
 
 .pie-copyright {
     font-weight: 800;
+}
+
+
+@media screen and (width <= 768px) {
+    .pie-enlace {
+        padding-inline: .5rem;
+    }
+
+    .pie-enlaces {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .pie-copyright {
+        font-size: .8rem;
+    }
 }

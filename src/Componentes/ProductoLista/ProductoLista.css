@@ -1,0 +1,42 @@
+.producto-seccion {
+    margin-block: 80px;
+}
+
+.producto-contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.producto-titulo {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.producto-cartas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 1300px;
+    margin-inline: 20px;
+}
+
+@media screen and (width <= 975px) {
+
+    .producto-cartas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media screen and (width <= 768px) {
+
+    .producto-cartas {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+}

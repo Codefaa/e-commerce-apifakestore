@@ -1,0 +1,21 @@
+.productodetalle-seleccion-cantidad {
+    display: flex;
+}
+
+.productodetalle-numero-cantidad {
+    border-block: 1px solid black;
+    padding-block: .8rem;
+    width: 3rem;
+    text-align: center;
+    user-select: none;
+    font-size: 1.3rem;
+}
+
+.btn {
+    width: 2rem;
+    padding-block: .8rem;
+    background-color: white;
+    border: 1px solid black;
+    cursor: pointer;
+    font-size: 1.3rem;
+}

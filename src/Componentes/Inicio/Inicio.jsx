@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { useFetch } from '../../useFetch/useFetch';
 import './Inicio.css';
 
@@ -37,14 +38,20 @@ function Inicio() {
 
                     return (
 
-                    <section key={ropa.id} className='coleccion-carta'>
-                        <img className='coleccion-imagen' src={ropa.image} alt={ropa.title} />
-                        <div className='coleccion-nombreheart'>
-                            <h4 className='coleccion-nombre'>{ropa.title}</h4>
-                            <i className="corazon bi bi-heart"></i>
-                        </div>
-                        <p className='coleccion-precio'>${ropa.price}</p>
-                    </section>
+                        <section key={ropa.id} className='producto-carta'>
+                            <Link to={`/productos/${ropa.id}`} >
+                            <div className="carta">
+                                <img className='producto-imagen' src={ropa.image} alt={ropa.title} />
+                                <div className="producto-fondonegro"></div>
+                            </div>
+                            </Link>
+                            
+                            <div className='producto-nombreheart'>
+                                <Link className='producto-enlacenombre' to={`/productos/${ropa.id}`}><h4 className='producto-nombre'>{ropa.title}</h4></Link>
+                                <i className="corazon bi bi-heart"></i>
+                            </div>
+                            <p className='producto-precio'>${ropa.price}</p>
+                        </section>
 
                 )
                 })

@@ -3,6 +3,7 @@
     padding: 2rem;
 }
 
+
 .encabezado-contenedor {
     display: flex;
     flex-direction: column;
@@ -23,27 +24,18 @@
     color: var(--color-secundario);
 }
 
+
 .encabezado-titulo {
     font-size: 2.4rem;
     font-weight: 800;
-    margin-left: 10rem;
+
     cursor: pointer;
 }
 
 .encabezado-filtros {
     display: flex;
-    gap: 20px;
-}
-
-.encabezado-compra {
-    display: flex ;
     align-items: center;
     gap: 20px;
-    cursor: pointer;
-}
-.encabezado-micompra {
-    text-transform: uppercase;
-    font-size: .7rem;
 }
 
 .bi-search, 
@@ -68,4 +60,138 @@
 .encabezado-enlace:hover {
     color: gray;
     transition: all .4s;
+}
+
+/* menu */
+
+.encabezado-prueba {
+    display: none;
+}
+
+.bi-list {
+    opacity: 0;
+    visibility: hidden;
+    color: #ff9100;
+    font-size: 2.4rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all .4s;
+}
+
+.bi-list:hover {
+    color: black;
+}
+
+.bi-x-lg {
+    color: white;
+    font-size: 2.4rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all .4s;
+    padding: 1rem;
+}
+
+.bi-x-lg:hover {
+    color: gray;
+}
+
+.encabezado-menu {
+    background-color: #222529;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100%;
+    padding: 1rem;
+}
+
+.encabezado-menu-enlaces {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 2rem;
+}
+
+.encabezado-menu-enlace {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 0 1rem 1rem 1rem;
+    border-bottom: 1px solid white;
+    font-size: .8rem;
+}
+
+.encabezado-menu-enlace:hover {
+    color: gray;
+}
+
+
+@media screen and (width <= 975px) {
+
+
+
+    .bi-list {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .App {
+        position: relative;
+
+    }
+
+    .encabezado-prueba.isActive {
+        display: block;
+        z-index: 100;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.700);
+
+        height: 100%;
+    }
+
+    .encabezado-titulo {
+        font-size: 1.8rem;   
+    }
+
+    .encabezado-secundario {
+        display: none;
+    }
+
+    .encabezado-filtros {
+        font-size: .8rem;
+    }
+
+}
+
+@media screen and (width <= 768px) { 
+
+    .encabezado-principal {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 20px;
+
+    }
+
+    .encabezado-tituloenlace {
+        grid-row: 1;
+        grid-column: 1/3;
+        justify-self: center;
+    }
+
+    .encabezado-titulo {
+        font-size: 1.5rem;   
+    }
+
+    .encabezado-filtros {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
 }

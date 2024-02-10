@@ -12,8 +12,8 @@ export function useFetch(url) {
             .then((resp) => resp.json())
             .then((data) => setListaProducto(data))
             .catch((error) => setError(error))
-            .finally(() => setLoading(false));
-    }, []);
+            .finally(() => setLoading(false))
+    }, [url]);
 
     return { data, loading, error };
 }
