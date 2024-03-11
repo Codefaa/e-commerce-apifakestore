@@ -1,7 +1,6 @@
 import { Link, useLocation } from 'react-router-dom';
 import './Encabezado.css';
 import { useEffect, useState } from 'react';
-import BarraBusqueda from '../Filtros/BarraBusqueda';
 import MiCompra from '../Filtros/MiCompra';
 import Favoritos from '../Filtros/Favoritos';
 
@@ -57,7 +56,6 @@ function Encabezado ({ onSearch, busqueda }) {
                     
                     <div className='encabezado-filtros'>
                         {/* Pasa la función onSearch y el estado busqueda a BarraBusqueda */}
-                        <BarraBusqueda onSearch={onSearch} busqueda={busqueda} />
                         <MiCompra />
                         <Favoritos />
                     </div>

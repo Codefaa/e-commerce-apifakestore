@@ -10,10 +10,10 @@ function Inicio() {
     return(
         <main className='inicio-main'>
 
-            <section className='inicio-arriba'>
+            <figure className='inicio-arriba'>
                 <img className='inicio-imagen' src="https://bercher.com.ar/assets/images/slider/pFVJud02jitu1aoeXSHqTnR5490umzOp8kb5UWiG.jpg" alt="fondo" />
                 <h1 className='inicio-titulo'>Coleccion</h1>
-            </section>
+            </figure>
 
 
             <section className='inicio-abajo'>

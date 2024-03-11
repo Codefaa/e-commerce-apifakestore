@@ -9,19 +9,19 @@ export function CartProvider( {children} ) {
     const [carrito, setCarrito] = useState(carritoInicial);
 
     function handleAgregar(data, cantidad) {
-        const productoAgregado = { ...data, cantidad };
-        
-        const nuevoCarrito = [...carrito];
-        const estaEnElCarrito = nuevoCarrito.find((producto) => producto.id === productoAgregado.id);
-    
-        if(estaEnElCarrito) {
-            estaEnElCarrito.cantidad += cantidad;
-        } else{
-            nuevoCarrito.push(productoAgregado);
-        }
-        setCarrito(nuevoCarrito);
-        
-    }
+      const productoAgregado = { ...data, cantidad };
+      
+      const nuevoCarrito = [...carrito];
+      const estaEnElCarrito = nuevoCarrito.find((producto) => producto.id === productoAgregado.id);
+  
+      if(estaEnElCarrito) {
+          estaEnElCarrito.cantidad += cantidad;
+      } else{
+          nuevoCarrito.push(productoAgregado);
+      }
+      setCarrito(nuevoCarrito);
+      
+  }
 
     function handleVaciar() {
         setCarrito([]);
@@ -40,7 +40,7 @@ export function CartProvider( {children} ) {
     }, [carrito])
 
     return (
-        <CartContext.Provider value={ {carrito, setCarrito, handleAgregar, handleVaciar, cantidadEnCarrito, precioTotal} }>
+        <CartContext.Provider value={ {carrito, handleAgregar, handleVaciar, cantidadEnCarrito, precioTotal} }>
             {children}
         </CartContext.Provider>
     )

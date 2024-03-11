@@ -5,7 +5,7 @@ import { useContext } from 'react';
 
 function Producto( {data, loading, error } ) {
 
-    const { agregarFavorito, quitarFavorito, favoritos } = useContext(FavoritosContext); // Obtener el contexto de favoritos
+    const { agregarFavorito, quitarFavorito, favoritos } = useContext(FavoritosContext);
 
     function handleFavorito(id) {
         if (favoritos.some((producto) => producto.id === id)) {

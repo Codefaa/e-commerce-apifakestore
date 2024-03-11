@@ -20,29 +20,29 @@ function Carrito() {
 
                 <aside className='carrito-izquierda'>
 
-                <table className='carrito-tabla'>
-                    <thead className='tabla-thead'>
-                        <tr className='thead-tr'>
-                            <th className='tr-th producto'>Producto</th>
-                            <th className='tr-th nombre'>Nombre</th>
-                            <th className='tr-th precio'>Precio</th>
-                            <th className='tr-th cantidad'>Cantidad</th>
-                            <th className='tr-th subtotal'>Subtotal</th>
-                        </tr>
-                    </thead>
-                        
-                    <tbody className='tabla-tbody'>
-                    {carrito.map((prod) => (
-                        <tr key={prod.id} className='tbody-tr'>
-                            <td className='tr-td imagen'><Link to={`/productos/${prod.id}`}><img className='tabla-imagen' src={prod.image} alt={prod.title} /></Link></td>
-                            <td className='tr-td nombre'><Link className='tabla-nombre-enlace' to={`/productos/${prod.id}`}>{prod.title}</Link></td>
-                            <td className='tr-td precio'><span>${prod.price}</span></td>
-                            <td className='tr-td cantidad'><span>{prod.cantidad}</span></td>
-                            <td className='tr-td subtotal'><span>${prod.price * prod.cantidad}</span></td>
-                        </tr>
-                    ))}
-                    </tbody>
-                </table>
+                    <table className='carrito-tabla'>
+                        <thead className='tabla-thead'>
+                            <tr className='thead-tr'>
+                                <th className='tr-th producto'>Producto</th>
+                                <th className='tr-th nombre'>Nombre</th>
+                                <th className='tr-th precio'>Precio</th>
+                                <th className='tr-th cantidad'>Cantidad</th>
+                                <th className='tr-th subtotal'>Subtotal</th>
+                            </tr>
+                        </thead>
+                            
+                        <tbody className='tabla-tbody'>
+                        {carrito.map((prod) => (
+                            <tr key={prod.id} className='tbody-tr'>
+                                <td className='tr-td imagen'><Link to={`/productos/${prod.id}`}><img className='tabla-imagen' src={prod.image} alt={prod.title} /></Link></td>
+                                <td className='tr-td nombre'><Link className='tabla-nombre-enlace' to={`/productos/${prod.id}`}>{prod.title}</Link></td>
+                                <td className='tr-td precio'><span>${prod.price}</span></td>
+                                <td className='tr-td cantidad'><span>{prod.cantidad}</span></td>
+                                <td className='tr-td subtotal'><span>${prod.price * prod.cantidad}</span></td>
+                            </tr>
+                        ))}
+                        </tbody>
+                    </table>
 
                     <div className="carrito-vaciar">
                         <button className='carrito-vaciar-boton' type="submit" onClick={handleVaciar}>Vaciar carrito</button>

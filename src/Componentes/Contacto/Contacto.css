@@ -34,8 +34,6 @@
     font-size: .8rem;
 }
 
-
-
 .contacto-derecha {
     display: flex;
     flex-direction: column;
@@ -79,4 +77,43 @@
     background-color: #D98568;
     transition: all .5s;
     border: 0;
+}
+
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    .contacto-text {
+        width: 100%;
+    }
+
+    .contacto-textarea {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 767px) {
+
+    .contacto-contenedor {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 20px;
+    }
+
+    .contacto-nosotros {
+        font-size: 1.02rem;
+    }
+
+    .contacto-inputtex {
+        flex-direction: column;
+    }
+
+    .contacto-text {
+        width: 100%;
+    }
+
+    .contacto-textarea {
+        width: 100%;
+    }
+
 }

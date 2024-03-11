@@ -187,7 +187,7 @@ table tbody {
 }
 
 
-@media screen and (width <= 975px) {
+@media (min-width: 768px) and (max-width: 1023px) {
 
     .carrito-seccion {
         width: 100%;
@@ -205,18 +205,42 @@ table tbody {
         justify-content: center;
         margin-inline: 20px;
     }
+    
 }
 
+@media (max-width: 767px) {
+    
+    .carrito-seccion {
+        width: 400px;   
+    }
 
-@media screen and (width <= 768px)  {
+    .carrito-derecha {
+        width: 100%;
+    }
 
     .carrito-izquierda {
-        font-size: .7rem;
+        font-size: .6rem;
+    }
+
+    .tabla-nombre-enlace {
+        font-size: .6rem;
+    }
+
+    .carrito-contenedor {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-inline: 20px;
+    }
+
+    .carrito-titulo-pasos {
+        font-size: .9em;
     }
 
     .carrito-tabla .nombre {
-        padding-inline: 2rem;
         
+        padding-inline: 2rem;
     }
 
     .tr-th {
@@ -227,13 +251,5 @@ table tbody {
     .tr-td {
         padding: 0px;
         margin: 5px;
-    }
-
-}
-
-@media screen and (width <= 542px) {
-
-    .carrito-titulo-pasos {
-        font-size: 1rem;
     }
 }
